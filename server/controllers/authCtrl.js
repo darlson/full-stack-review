@@ -32,7 +32,7 @@ module.exports = {
         const salt = bcrypt.genSaltSync(10)
         const hash = bcrypt.hashSync(password, salt)
 
-        const newUer = await db.register_user([email, hash])
+        const newUser = await db.register_user([email, hash])
 
         req.session.user = {
             userId: newUser[0].user_id,
