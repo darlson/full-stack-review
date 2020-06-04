@@ -92,8 +92,8 @@ CREATE TABLE posts (
         - Edit.js /.css
         - Header.js /.css
         - AuthHeader.js /.css
-    - server/
-        - index.js
-        - controllers/
-            - authController.js
-            - postController.js
+- server/
+    - index.js
+    - controllers/
+        - authController.js
+        - postController.js
