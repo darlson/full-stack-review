@@ -1,13 +1,22 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {getUser} from '../redux/reducer'
 
-export default class Dashboard extends Component {
+class Dashboard extends Component {
+    
+    componentDidMount(){
+        this.props.getUser()
+    }
+
     render() {
+        console.log('from dashboard now: ', this.props)
         return (
             <div>
                 Dashboard.js
-                <Link to='/profile'>Go to Profile</Link>
             </div>
         )
     }
 }
+
+const mapStateToProps = reduxState => reduxState
+export default connect(mapStateToProps, {getUser})(Dashboard)
